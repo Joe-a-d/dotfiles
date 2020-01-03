@@ -1,0 +1,13 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+	process = git-lfs filter-process
+[user]
+	name = Joe-a-d
+	email = 2334590D@student.gla.ac.uk
+[filesystem "Oracle Corporation|1.8.0_131|/dev/disk1s5"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[credential]
+	helper = osxkeychain

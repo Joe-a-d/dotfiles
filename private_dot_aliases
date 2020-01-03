@@ -1,0 +1,20 @@
+
+# override default programs/versions
+ alias vim='mvim -v'
+ alias python="python3"
+ alias diff="colordiff"
+
+# navigation
+ alias ~uni="cd ~/Documents/Uni/2"
+ alias ~ln="cd ~/Documents/Uni/LectureNotesGlasgow/Year2"
+
+# Outputs ls in grid and with headers
+ alias lshg="lsh --grid"
+ alias lsh="exa -l --header"
+
+# [NO LONGER Search last commands output in SO in terminal
+#whySO=var=\"$(\!\! 2>&1)\" BROWSER=lynx googler -w stackoverflow.com "$var"
+
+# print .aliases contents
+
+alias myalias="cat ~/.aliases"

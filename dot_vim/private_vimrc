@@ -1,0 +1,63 @@
+
+" Solarized
+syntax enable
+set background=dark
+colorscheme solarized
+
+" Plugged - Plugin Mannager - Setup
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/goyo.vim'
+Plug 'vim-nerdtree/nerdtree'
+Plug 'plasticboy/vim-markdown'
+Plug 'lervag/vimtex'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'tomtom/tlib_vim'
+Plug 'marcweber/vim-addon-mw-utils'
+Plug 'garbas/vim-snipmate'
+Plug 'rbonvall/snipmate-snippets-bib'
+Plug 'honza/vim-snippets'
+call plug#end()
+
+" Layout
+set ls=2
+set textwidth=80
+set tabstop=4
+set softtabstop=4
+" set expandtab :: Uncomment to read tabs as spaces
+set splitright splitbelow
+
+"""Set statusline
+set laststatus=2
+set statusline=
+set statusline+=%F
+set statusline+=%=
+set statusline+=%P
+set statusline+=\
+set statusline+=%l
+set statusline+=:
+set statusline+=:
+set statusline+=%c
+set statusline+=\
+set statusline+=%y
+
+" Custom Bindings
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+nnoremap  $
+nnoremap   ^
+
+" UI
+set nocompatible
+set number relativenumber
+set showcmd
+set wildmenu
+set showmatch
+set foldenable
+set foldmethod=indent
+
+" Search
+set rtp+=/usr/local/opt/fzf
+set hlsearch
+set incsearch
