@@ -132,7 +132,7 @@ function timer(){
 source $HOME/.aliases
 
 # Turn off EOF : Ctrl + D 
-set -o
+set -o ignoreeof
 
 #[VIRTUALENVWRAPPER]
 
