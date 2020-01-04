@@ -131,6 +131,8 @@ function timer(){
 #[YOUR MOD]
 source $HOME/.aliases
 
+# Turn off EOF : Ctrl + D 
+set -o
 
 #[VIRTUALENVWRAPPER]
 
