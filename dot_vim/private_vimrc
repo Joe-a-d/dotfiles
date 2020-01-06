@@ -54,7 +54,7 @@ nnoremap   ^
 " UI
 set nocompatible
 set number relativenumber
-'shows typed commands bottom-leftCorner
+"shows typed commands bottom-leftCorner
 set showcmd
 set wildmenu
 set showmatch
