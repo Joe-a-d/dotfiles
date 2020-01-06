@@ -11,9 +11,9 @@ Plug 'vim-nerdtree/nerdtree'
 Plug 'plasticboy/vim-markdown'
 Plug 'lervag/vimtex'
 Plug 'ycm-core/YouCompleteMe'
-Plug 'garbas/vim-snipmate'
-Plug 'rbonvall/snipmate-snippets-bib'
-Plug 'honza/vim-snippets'
+"Plug 'garbas/vim-snipmate'
+"Plug 'rbonvall/snipmate-snippets-bib'
+"Plug 'honza/vim-snippets'
 Plug 'osyo-manga/vim-over'
 call plug#end()
 
