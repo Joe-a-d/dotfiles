@@ -11,17 +11,20 @@ Plug 'vim-nerdtree/nerdtree'
 Plug 'plasticboy/vim-markdown'
 Plug 'lervag/vimtex'
 Plug 'ycm-core/YouCompleteMe'
-Plug 'tomtom/tlib_vim'
-Plug 'marcweber/vim-addon-mw-utils'
 Plug 'garbas/vim-snipmate'
 Plug 'rbonvall/snipmate-snippets-bib'
 Plug 'honza/vim-snippets'
+Plug 'osyo-manga/vim-over'
 call plug#end()
+
+"Man pages
+runtime! ftplugin/man.vim
 
 " Layout
 set ls=2
 set textwidth=80
 set tabstop=4
+set colorcolumn=80
 set softtabstop=4
 " set expandtab :: Uncomment to read tabs as spaces
 set splitright splitbelow
@@ -51,13 +54,13 @@ nnoremap   ^
 " UI
 set nocompatible
 set number relativenumber
+'shows typed commands bottom-leftCorner
 set showcmd
 set wildmenu
 set showmatch
-set foldenable
 set foldmethod=indent
 
 " Search
-set rtp+=/usr/local/opt/fzf
+" highlights search patterns
 set hlsearch
 set incsearch
