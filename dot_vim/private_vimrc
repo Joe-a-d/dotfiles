@@ -15,6 +15,7 @@ Plug 'ycm-core/YouCompleteMe'
 "Plug 'rbonvall/snipmate-snippets-bib'
 "Plug 'honza/vim-snippets'
 Plug 'osyo-manga/vim-over'
+Plug 'wellle/targets.vim'
 call plug#end()
 
 "Man pages

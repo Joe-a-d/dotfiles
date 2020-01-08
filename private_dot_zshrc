@@ -1,6 +1,6 @@
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin/:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/bin/:/usr/local/bin:/usr/local/sbin:$HOME/myScripts:$PATH
 
 path+=(~/bin/ ~/bin/**/*(N/))
 
@@ -10,7 +10,7 @@ typeset -aU path
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/GloopyJoe/.oh-my-zsh"
+export ZSH="/Users/joe-a-d/.oh-my-zsh"
 
 export github_token=$(security find-generic-password -s github_access_token -a joe-a-d -w)
 
@@ -99,14 +99,6 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
- alias zshconfig="atom ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 #[YOUR MOD]
 #Function Definitions ; Alternative to aliases which need parameters
@@ -131,7 +123,7 @@ function timer(){
 #[YOUR MOD]
 source $HOME/.aliases
 
-# Turn off EOF : Ctrl + D 
+# Turn off EOF : Ctrl + D
 set -o ignoreeof
 
 #[VIRTUALENVWRAPPER]
@@ -142,4 +134,4 @@ set -o ignoreeof
  source /usr/local/bin/virtualenvwrapper.sh
 
 # HAS TO BE LAST!!!
-source /Users/GloopyJoe/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /Users/joe-a-d/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

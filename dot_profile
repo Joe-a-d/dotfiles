@@ -1,0 +1,18 @@
+#ALIAS
+
+#run jupyter notebook from haskell dir
+
+alias jhaskell='jupyter notebook --notebook-dir=/Users/joe-a-d/Desktop/P/Haskell'
+
+#pip3 to pip
+
+alias pip='pip3'
+#############
+
+#default paths
+
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+#ENV VARIBLES
+
+EDITOR='mvim -f'

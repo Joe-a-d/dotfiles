@@ -8,6 +8,8 @@
  alias ~uni="cd ~/Documents/Uni/2"
  alias ~ln="cd ~/Documents/Uni/LectureNotesGlasgow/Year2"
 
+# edit CFG files
+ alias zshconfig="$EDITOR  ~/.zshrc"
 # Outputs ls in grid and with headers
  alias lshg="lsh --grid"
  alias lsh="exa -l --header"
