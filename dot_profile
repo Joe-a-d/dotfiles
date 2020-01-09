@@ -15,4 +15,4 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 #ENV VARIBLES
 
-EDITOR='mvim -f'
+export EDITOR='mvim -f'
