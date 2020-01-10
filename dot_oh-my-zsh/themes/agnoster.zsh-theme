@@ -87,9 +87,10 @@ prompt_end() {
 # Each component will draw itself, and hide itself if no information needs to be shown
 
 # Context: user@hostname (who am I and where am I)
+# MOD : ADD TIME ; REMOVE HOST
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "[%*]%(!.%{%F{yellow}%}.)%n@%m"
+    prompt_segment black default "[%*]%(!.%{%F{yellow}%}.)@%m"
   fi
 }
 
@@ -151,7 +152,7 @@ prompt_bzr() {
         else
             if [[ $status_all -gt 0 ]] ; then
                 prompt_segment yellow black
-                echo -n "bzr@"$revision
+                echo -n "bzr@%n@%m"$revision
             else
                 prompt_segment green black
                 echo -n "bzr@"$revision
@@ -202,7 +203,7 @@ prompt_hg() {
 #   prompt_segment blue $CURRENT_FG '%~'
 # }
 
-# COMPACT PATH
+# COMPACT PATH#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*
 # # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 function prompt_dir(){
