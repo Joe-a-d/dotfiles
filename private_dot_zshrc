@@ -1,13 +1,20 @@
+#[SOURCE]
 source $HOME/.profile
+source $HOME/.aliases
 
 #ENV VARIBLES
 
 
 export EDITOR="/usr/local/bin/mvim"
 
+#[BINDINGS]
+
+
+# Turn off EOF : Ctrl + D
+set -o ignoreeof
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin/:/usr/local/bin:/usr/local/sbin:$HOME/myScripts:$PATH
+export PATH=$HOME/bin/:/usr/local/bin:/usr/local/sbin:$HOME/myScripts:/Library/TeX/texbin:$PATH
 
 path+=(~/bin/ ~/bin/**/*(N/))
 
@@ -82,7 +89,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting colored-man-pages)
+plugins=(git zsh-syntax-highlighting colored-man-pages vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -117,21 +124,12 @@ source $ZSH/oh-my-zsh.sh
 #      BROWSER=lynx googler -w stackoverflow.com "$err"
 # }
 
-# Timer : Takes a
-function timer(){
-    echo "$1 min timer set. Go Forth! "
-    sleep $(($1*60))
-    open -a firefox "https://www.youtube.com/embed/Z3ZAGBL6UBA?rel=0&amp;autoplay=1;fs=0;autohide=0;hd=0;"
-
+#run pdflatex and clean aux files
+function texpdf(){
+	pdflatex "$1" ;
+	latexmk -c;
+	rm *\.xml
 }
-
-
-
-#[YOUR MOD]
-source $HOME/.aliases
-
-# Turn off EOF : Ctrl + D
-set -o ignoreeof
 
 #[VIRTUALENVWRAPPER]
 
