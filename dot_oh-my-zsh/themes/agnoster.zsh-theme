@@ -87,10 +87,10 @@ prompt_end() {
 # Each component will draw itself, and hide itself if no information needs to be shown
 
 # Context: user@hostname (who am I and where am I)
-# MOD : ADD TIME ; REMOVE HOST
+# MOD : ADD EXIT STATUS CODE ; ADD TIME ; REMOVE HOST
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "[%*]%(!.%{%F{yellow}%}.)@%m"
+    prompt_segment black default "%(?.%{$fg[green]%}0.%{$fg[red]%}[%?] )[%*]%(!.%{%F{yellow}%}.)@%m"
   fi
 }
 
@@ -279,4 +279,4 @@ build_prompt() {
   prompt_end
 }
 
-PROMPT='%(?.%{$fg[cyan]%}0.%{$fg[red]%}[%?] )%{%f%b%k%}$(build_prompt) '
+PROMPT='%{%f%b%k%}$(build_prompt) '

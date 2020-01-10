@@ -14,7 +14,7 @@ export EDITOR="/usr/local/bin/mvim"
 set -o ignoreeof
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin/:/usr/local/bin:/usr/local/sbin:$HOME/myScripts:/Library/TeX/texbin:$PATH
+export PATH=$HOME/bin/:/usr/local/bin:/usr/local/sbin:/Library/TeX/texbin:$PATH
 
 path+=(~/bin/ ~/bin/**/*(N/))
 
