@@ -196,10 +196,38 @@ prompt_hg() {
   fi
 }
 
-# Dir: current working directory
-prompt_dir() {
-  prompt_segment blue $CURRENT_FG '%~'
-}
+# ORIGINAL PATH : CAN ALSO set integer n after % to show only last n dirs
+# # Dir: current working directory
+# prompt_dir() {
+#   prompt_segment blue $CURRENT_FG '%~'
+# }
+
+# COMPACT PATH
+# # Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+function prompt_dir(){
+
+setopt localoptions extendedglob
+
+local current_pwd="${PWD/#$HOME/~}"
+local ret_directory
+
+if [[ "$current_pwd" == (#m)[/~] ]]; then
+  ret_directory="$MATCH"
+  unset MATCH
+elif zstyle -m ':prezto:module:prompt' pwd-length 'full'; then
+  ret_directory=${PWD}
+elif zstyle -m ':prezto:module:prompt' pwd-length 'long'; then
+  ret_directory=${current_pwd}
+else
+  ret_directory="${${${${(@j:/:M)${(@s:/:)current_pwd}##.#?}:h}%/}//\%/%%}/${${current_pwd:t}//\%/%%}"
+fi
+
+unset current_pwd
+
+prompt_segment blue $CURRENT_FG "$ret_directory"
+
+ }
 
 # Virtualenv: current working virtualenv
 prompt_virtualenv() {
@@ -250,4 +278,4 @@ build_prompt() {
   prompt_end
 }
 
-PROMPT='%(?.0.[%?] )%{%f%b%k%}$(build_prompt) '
+PROMPT='%(?.%{$fg[cyan]%}0.%{$fg[red]%}[%?] )%{%f%b%k%}$(build_prompt) '
