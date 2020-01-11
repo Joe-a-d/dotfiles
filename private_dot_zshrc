@@ -124,13 +124,6 @@ source $ZSH/oh-my-zsh.sh
 #      BROWSER=lynx googler -w stackoverflow.com "$err"
 # }
 
-#run pdflatex and clean aux files
-function texpdf(){
-	pdflatex "$1" ;
-	latexmk -c;
-	rm *\.xml
-}
-
 #[VIRTUALENVWRAPPER]
 
  export WORKON_HOME=$HOME/.virtualenvs   # Optional
