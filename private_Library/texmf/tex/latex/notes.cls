@@ -34,7 +34,12 @@
       \newcommand\extra[3]{\shadowbox{
 	\parbox{\textwidth}{\textbf{#1}{\ #2} \\ \rule{\textwidth}{1pt} \\   #3}}}
      
-  
+    %% https://davidyat.es/2016/07/27/writing-a-latex-macro-that-takes-a-variable-number-of-arguments/
+    \newcommand{\key}[1]{%
+    \faKey \qquad #1\checknextarg}
+    \newcommand{\checknextarg}{\@ifnextchar\bgroup{\gobblenextarg}{ }}
+    \newcommand{\gobblenextarg}[1]{ , #1\@ifnextchar\bgroup{\gobblenextarg}{ \\ }}  
+
   %%%%%%%%%%%%%%%%% List Definitions %%%%%%%%%%%%%%%%%%%%%%
   \newcommand{\printDefn}{\defnlist\gdef\defnlist{}}
   \newcommand\defnlist{} 
@@ -174,6 +179,7 @@
 \RequirePackage{framed,color,fancybox}
 \RequirePackage{tikz}
 \RequirePackage{bbding}
+\RequirePackage{fontawesome}
 \usetikzlibrary{arrows}
 \usetikzlibrary{patterns}
 \usetikzlibrary{shapes}
