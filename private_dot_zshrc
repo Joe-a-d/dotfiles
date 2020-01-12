@@ -3,7 +3,7 @@ source $HOME/.profile
 source $HOME/.aliases
 
 #ENV VARIBLES
-
+notes=/Users/joe-a-d/Library/texmf/tex/latex/notes.cls
 
 export EDITOR="/usr/local/bin/mvim"
 
