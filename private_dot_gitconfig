@@ -11,3 +11,9 @@
 	minRacyThreshold = 0 nanoseconds
 [credential]
 	helper = osxkeychain
+
+[core]
+    editor = mvim -f
+
+[commit]
+gpgsign = false

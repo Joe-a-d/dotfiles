@@ -23,12 +23,13 @@ runtime! ftplugin/man.vim
 
 " Layout
 set ls=2
-set textwidth=80
-set tabstop=4
-set colorcolumn=80
-set softtabstop=4
+set textwidth=100
+set columns=100
+set colorcolumn=100
 " set expandtab :: Uncomment to read tabs as spaces
 set splitright splitbelow
+" tabs to spaces
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 """Set statusline
 set laststatus=2
@@ -65,3 +66,7 @@ set foldmethod=indent
 " highlights search patterns
 set hlsearch
 set incsearch
+
+" spell check
+:set spell spelllang=en
+

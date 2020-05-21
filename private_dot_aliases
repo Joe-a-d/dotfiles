@@ -17,6 +17,9 @@
 # [NO LONGER Search last commands output in SO in terminal
 #whySO=var=\"$(\!\! 2>&1)\" BROWSER=lynx googler -w stackoverflow.com "$var"
 
+#DJANGO
+ alias pmg="python manage.py"
+
 # print .aliases contents
 
 alias myalias="cat ~/.aliases"

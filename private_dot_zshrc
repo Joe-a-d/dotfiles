@@ -1,3 +1,14 @@
+# Shell Startup Timing
+#zmodload zsh/datetime
+#setopt prompt_subst
+#ps4='+$epochrealtime %n:%i> '
+#
+#logfile=$(mktemp zsh_profile.XXXXXXXX)
+#echo "Logging to $logfile"
+#exec 3>&2 2>$logfile
+#
+#setopt XTRACE
+
 #[SOURCE]
 source $HOME/.profile
 source $HOME/.aliases
@@ -6,7 +17,9 @@ source $HOME/.aliases
 notes=/Users/joe-a-d/Library/texmf/tex/latex/notes.cls
 
 export EDITOR="/usr/local/bin/mvim"
-
+eval "$(rbenv init -)"
+#### Links Rubies to Homebrew OpenSSL for auto upgrades, remove if interfering with old Ruby versions <2.4
+# export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 #[BINDINGS]
 
 
@@ -26,6 +39,7 @@ export PATH="$HOME/Library/Haskell/bin:$PATH"
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/joe-a-d/.oh-my-zsh"
 
+# retrieves PAT token from Keychain
 export github_token=$(security find-generic-password -s github_access_token -a joe-a-d -w)
 
 #[YOUR MOD] Add googler option completion file to fpath
@@ -129,7 +143,13 @@ source $ZSH/oh-my-zsh.sh
  export WORKON_HOME=$HOME/.virtualenvs   # Optional
  export PROJECT_HOME=$HOME/projects      # Optional
  export VIRTUALENVWRAPPER_HOOK_DIR=$WORKON_HOME/Hooks
- source /usr/local/bin/virtualenvwrapper.sh
+ export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+ source /usr/local/bin/virtualenvwrapper_lazy.sh
 
 # HAS TO BE LAST!!!
 source /Users/joe-a-d/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
+# Shell Startup Timing
+#unsetopt XTRACE
+#exec 2>&3 3>&-

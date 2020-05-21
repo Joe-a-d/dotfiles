@@ -174,7 +174,7 @@
 
 %%%%%%%%%%%%%%%%  PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\RequirePackage[pdftex,colorlinks,linkcolor=black,urlcolor=black,citecolor=black]{hyperref}
+\RequirePackage{listings}
 \RequirePackage{fancyhdr}
 \RequirePackage{framed,color,fancybox}
 \RequirePackage{tikz}
@@ -209,7 +209,7 @@
 \RequirePackage{todo,float}
 \RequirePackage{Commons}
 \RequirePackage[linesnumbered,ruled,vlined]{algorithm2e}
-
+\RequirePackage[pdftex,colorlinks,linkcolor=black,urlcolor=black,citecolor=black]{hyperref}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
