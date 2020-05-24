@@ -6,16 +6,36 @@ colorscheme solarized
 
 " Plugged - Plugin Mannager - Setup
 call plug#begin('~/.vim/plugged')
+
+" zen mode
 Plug 'junegunn/goyo.vim'
+
+"file tree
 Plug 'vim-nerdtree/nerdtree'
+
+" md syntax and editor
 Plug 'plasticboy/vim-markdown'
+
+" compilation highlighter, motions
 Plug 'lervag/vimtex'
+
+" autocompletion
 Plug 'ycm-core/YouCompleteMe'
+
+" snippets
 "Plug 'garbas/vim-snipmate'
 "Plug 'rbonvall/snipmate-snippets-bib'
 "Plug 'honza/vim-snippets'
+
+" search live highlighter 
 Plug 'osyo-manga/vim-over'
+
+" adds extra text objects 
 Plug 'wellle/targets.vim'
+
+" markdown preview
+Plug 'iamcco/markdown-preview.vim'
+Plug 'iamcco/mathjax-support-for-mkdp'
 call plug#end()
 
 "Man pages
