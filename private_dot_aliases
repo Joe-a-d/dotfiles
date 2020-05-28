@@ -23,3 +23,12 @@
 # print .aliases contents
 
 alias myalias="cat ~/.aliases"
+
+
+# timer [FUNCTION]
+
+timer(){
+    sleep $1
+    osascript -e "tell application \"System Events\" to keystroke \"h\" using {option down, command down}"
+    osascript -e "tell application \"System Events\" to keystroke \"m\" using {command down}"
+}
