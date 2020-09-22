@@ -10,7 +10,6 @@
 #setopt XTRACE
 
 #[SOURCE]
-source $HOME/.profile
 source $HOME/.aliases
 
 #ENV VARIBLES
@@ -28,7 +27,7 @@ set -o ignoreeof
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin/:/usr/local/bin:/usr/local/sbin:/Library/TeX/texbin:$PATH
-
+PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 path+=(~/bin/ ~/bin/**/*(N/))
 
 typeset -aU path

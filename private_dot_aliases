@@ -3,10 +3,12 @@
  alias vim='mvim -v'
  alias python="python3"
  alias diff="colordiff"
+ alias rm='rm -i'
+ alias mv='mv -i'
 
 # navigation
- alias ~uni="cd ~/Documents/Uni/2"
- alias ~ln="cd ~/Documents/Uni/LectureNotesGlasgow/Year2"
+ alias ~uni="cd ~/Documents/Uni/3"
+ alias ~ln="cd ~/Documents/Uni/LectureNotesGlasgow/"
 
 # edit CFG files
  alias zshconfig="$EDITOR  ~/.zshrc"
@@ -28,7 +30,36 @@ alias myalias="cat ~/.aliases"
 # timer [FUNCTION]
 
 timer(){
-    sleep $1
+    sleep $(( $1*60 ))
     osascript -e "tell application \"System Events\" to keystroke \"h\" using {option down, command down}"
     osascript -e "tell application \"System Events\" to keystroke \"m\" using {command down}"
+}
+
+#run jupyter notebook from haskell dir
+
+alias jhaskell='jupyter notebook --notebook-dir=/Users/joe-a-d/Documents/P/Haskell'
+# run jupyter from local folder
+alias jn='jupyter notebook --notebook-dir=.'
+
+#pip3 to pip
+
+alias pip='pip3'
+#############
+
+#default paths
+
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+
+# start fastai VM
+
+start_vm(){
+az vm start --resource-group dsvmfastai --name failinux
+sleep(20)
+open -a Firefox "https://104.45.42.136:8000"
+}
+
+shut_vm(){
+az vm deallocate --resource-group dsvmfastai --name failinux
+az vm list | grep diskSizeGb
 }
