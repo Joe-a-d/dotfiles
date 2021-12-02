@@ -1,0 +1,40 @@
+# default programs/versions
+
+alias diff="colordiff"
+alias rm='rm -i'
+alias mv='mv -i'
+alias pdflatex='pdflatex -no-shell-escape'
+
+## homebrew
+
+alias python="/opt/homebrew/bin/python3"
+alias pip="python -m pip"
+alias vim="/opt/homebrew/bin/vim"
+
+
+# navigation
+
+hash -d uni='/Users/joe-a-d/Library/Mobile Documents/com~apple~CloudDocs/UNI'
+hash -d ln='/Users/joe-a-d/LectureNotesGlasgow'
+hash -d notes='/Users/joe-a-d/Documents/notes'
+
+# edit CFG files
+
+alias zconfig="$EDITOR  ~/.zshrc"
+
+# Outputs ls in grid and with headers, requires exa utility
+
+alias lshg="lsh --grid"
+alias lsh="exa -l --header"
+
+
+#DJANGO
+
+alias pmg="python manage.py"
+
+# print .aliases contents
+
+alias myalias="less ~/.aliases"
+
+# run jupyter from local folder
+alias jn='jupyter notebook --notebook-dir=.'
